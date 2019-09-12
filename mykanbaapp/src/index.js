@@ -1,12 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./style.css";
+import Todo from "./components/Todo";
+import Doing from "./components/Doing";
+import Done from "./components/Done";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+/*
+Three imports: To do, Doing, Done
+*/
+/*
+const element = <div>Placeholder</div>;
+ReactDOM.render(element, document.getElementById("root"));
+*/
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const element = 
+    <div>
+        <hr></hr>
+        <h1>My Kanban App</h1>
+        <hr></hr>
+        <div id="content">
+            <div class="board" id="todo">
+
+            </div>
+            <div class="board" id="doing">
+
+            </div>
+            <div class="board" id="done">
+                
+            </div>
+        </div>
+    </div>
+;
+
+ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(<Todo/>, document.getElementById("todo"));
+ReactDOM.render(<Doing/>, document.getElementById("doing"));
+ReactDOM.render(<Done/>, document.getElementById("done"));
